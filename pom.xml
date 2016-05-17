@@ -142,6 +142,18 @@
     <sonar.jacoco.itReportPath>${project.basedir}/target/jacoco-it.exec</sonar.jacoco.itReportPath>
     <sonar.language>java</sonar.language>    
     
+    
+    
+        <!-- Used to locate the profile specific configuration file. -->
+        <build.profile.id>dev</build.profile.id>
+        <jacoco.it.execution.data.file>${project.build.directory}/coverage-reports/jacoco-it.exec</jacoco.it.execution.data.file>
+        <jacoco.ut.execution.data.file>${project.build.directory}/coverage-reports/jacoco-ut.exec</jacoco.ut.execution.data.file>
+        <jdk.version>1.7</jdk.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Only unit tests are run by default. -->
+        <skip.integration.tests>true</skip.integration.tests>
+        <skip.unit.tests>false</skip.unit.tests>
+    
         
 	</properties>
 	<dependencyManagement>
